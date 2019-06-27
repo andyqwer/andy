@@ -1,0 +1,107 @@
+广告宣传图，背景颜色。淘宝购物分类表--CSS列表。
+css背景样式：
+background-color：背景颜色
+background-image： 图片设为背景
+background-position ：设置背景图像的起始位置
+background-attachment：背景图像是否固定或者随着页面的其余部分滚动
+background-repeat：北京图片是否重复，如何重复
+background：简写，作用是想北京属性设置在一个声明中
+列表样式：
+list-style-type：列表项的类型
+list-style-image：将图像设置为列表项
+list-style-position：列表中列表项标志位置
+list-style：简写
+
+background-color:颜色 | transparent
+transparent是全透明黑色（rgba(0,0,0,0)）,透明色。
+背景包括内容、内边距和边框，不包括外边距（margin），padding:10px（内填充包含），margin:10px（外填充不包含外边距）
+设置背景边框时，只设置border:宽度 是不够的，需要指明边框的样式（虚线、直线）。
+*不设置边框颜色时，默认为文本颜色
+
+背景图片属性（background-image）
+设置元素的背景图片，语法：
+background-image:url(地址)|none;——（none无背景图片）
+具体例：background-image:url(img/bg-little.png);
+说明：
+1.url地址可以是相对地址也可以是绝对地址。
+2.元素的背景图片占据了元素的全部尺寸，包括内容、内边距和边框，但不包括外边距。
+3.默认地，背景图片位于元素的左上角，并在水平和垂直方向上重复（当图片大小无法充满元素的全部尺寸时，元素的其余尺寸在水平和垂直方向上重复显示该图片，使图片占据了元素的全部尺寸）。
+注：
+当你既设置背景图片又设置背景颜色的时候，背景图片会覆盖掉背景颜色（与两者代码前后顺序无关，背景图片都会覆盖掉背景颜色）。开发过程中一般会同时设置背景图片和背景颜色，以防图片失效后还可以看到背景颜色。
+
+背景图片重复属性（background-repeat）；必须基于有背景图片的情况下才是有效的。
+设置元素的背景图片的重复方式，格式：
+background-repeat:repeat|no-repeat|repeat-x|repeat-y;
+具体例：background-repeat:no-repeat;
+repeat：重复（默认值）
+no-repeat：不重复
+repeat-x：水平重复
+repeat-y：垂直重复（竖直方向重复）
+
+背景图片显示方式
+设置元素的背景图片的显示方式
+background-attachment：scroll、fixed
+说明：
+scroll：默认值，背景图片随滚动条滚动
+fixed：当页面的其余部分滚动时，背景图片不会移动
+
+图片定位background-position用于定位图片有有以下值<br>
+百分比：（x% y%），注：只写一个参数的话，第二个默认为居中<br>
+具体数值：（x y），注只写一个参数的话，第二个默认为居中<br>
+top：顶部显示，相当于垂直方向（50% 0）<br>
+right：右边显示，相当于（100% 50%）<br>
+bottom：底部显示，相当于（50% 100%）<br>
+left：左边显示，相当于（0 50%）<br>
+center：中间显示（50% 50%）
+
+背景缩写属性（background）
+background:
+	background-color 
+	background-image 
+	background-repeat 
+	background-attachment 
+	background-position；
+具体例：background:#000000 url(img/bg.png) no-repeat top fixed;
+说明：
+1.各值之间用空格分割，不分先后顺序，可写一个或多个值。
+2.当background-attachment 属性是fixed的时候，也就是说，背景图片不随滚动条滚动的时候，那么background-position的值(百分比)，都是相对于整个页面来说的，而不是背景图片的容器来说的，比如，这个时候，我设置居中，就是在整个页面的居中，如果这个时候，我attachment的属性是scroll的话，那么居中，就是针对背景图片的容器说的，
+
+css列表样式
+列表项标记类型属性（list-style-type）
+设置列表项的标记样式类型，语法：
+list-style-type:关键字|none;——disc是默认值
+具体例：
+list-style-type:circle;
+list-style-type:lower-roman;
+属性值为：
+1.无序列表
+none（无标记）
+disc（实心的圆点）
+circle（空心的圆点）
+square（实心的方块）
+2.有序列表
+none（无标记）
+decimal（从1开始的整数）
+lower-roman（小写罗马数字）
+upper-roman（大写罗马数字）
+lower-alpha（小写英文字母）
+upper-alpha（大写英文字母）
+注：css列表样式（列表项标记属性）可以将ul设置成有序列表, 将ol设置成无序列表，或者将ul，ol设置成无标记列表。列表项标记属性一般是作用在li标签（有标记的标签）样式上的。
+
+
+列表项标记图片属性（list-style-image）
+使用图片设置列表项的标记，语法：
+list-style-image:url(地址)|none;——一般是使用在有标记的标签（li）样式上的。
+none：没有使用图片设置列表项的标记。
+具体例：list-style-image:url(img/re.png);
+
+列表项标记位置 list-style-position用来表示列表项标记在list内的显示位置。 它包含两种基本属性：inside（标记在文本内，且环绕文本根据标记对齐）和outside（默认值，放在文字外面，不包括标记，第二行跟文本对齐）
+ 看大图
+
+列表样式缩写：
+list - style : list-style-type
+list-style-position
+list-style-image
+说明 值之间用空格分隔开
+顺序不固定
+list-style-imag 会覆盖 list-style-type 的设置

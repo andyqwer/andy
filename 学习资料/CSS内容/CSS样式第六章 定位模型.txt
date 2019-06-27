@@ -1,0 +1,15 @@
+position 定位：
+1、做为模块：Positioned Layout Module 提供与 元素定位和层叠相关 功能，它是核心模块。
+2、做为属性：.box{position:relative;}
+小知识点：
+document tree 文档树形结构
+normal-flow 自然顺序：在没有人为干扰的情况下，所有的元素会按照自然顺序(文档树形结构)排；
+containing block：元素定位的时候，是要进行一个x y轴的坐标偏移，始终需要一个参照物，参考的区域或者区块就叫做容器.
+=====
+定位模型：
+static 自然模型
+relative 相对定位模型
+absolute 绝对行为模型
+fixed 固定定位模型
+sticky 磁贴定位模型
+.box{position:relative;}指的是为盒子选择一种定位模型

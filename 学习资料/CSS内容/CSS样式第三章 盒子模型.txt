@@ -1,0 +1,141 @@
+网页中的盒子模型
+元素 element
+高度height
+宽度width
+内边距padding
+外边框margin
+边框 border
+
+宽度属性
+width:【长度值(in、cm、px)/百分比/auto】
+max-width和min-width。
+1当设置了width、max-width或min-width。
+max-width、min-width为宽度的界限，若width未超过界限则显示width,超过max,显示max.低于min,显示min.
+2.max-width和min-width有兼容性问题，IE6下只能识别width的值。
+3，同时设置max和min时，width超过max，显示max；低于min，显示min。若设置的max低于min,显示min。
+%;是针对于父元素来设置当前元素的宽度的。
+
+高度属性(使用方法，同宽度属性width基本一致)
+高度：
+height: 长度值/百分比/auto
+最大高度
+max-height:长度值/百分比/auto
+最小高度：
+min-height:长度值/百分比/auto
+注：
+1.min与max的高度与宽度设置在IE6及以下不兼容 ，无法实现。
+2.float属性（浮动属性）
+例：.p{float：left}——应用这个样式的p标签的内容都在同一行显示，没有换行显示。
+3.设置块级元素和替换元素的内容高度（一般内容的高度相当于元素（容器）的高度，因块级元素，占一整行，默认（设置）其他边框、边距都为0px。）
+4.height与line-height的区别：height是整个内容（可有多行）的高度（也就是规定一个容器有多高的内容），line-height只是一行的高度（是文本实际高度，所以会出现文本高度line-height超出我们规定的高度height）
+5.%是针对于父元素高度来设置当前元素的高度的。
+
+那些html元素可设置高和宽属性
+1、块级元素：
+<p>,<div>,<h1>~<h6>,<ul>,<li>,<ol>,<dl>,<dt>,<dd>等
+2、替换元素：
+浏览器根据其标签的元素与属性来判断现实的具体内容
+<img>，<input>,<textarea>等
+
+一、border边框属性（针对元素的边框）：
+1.边框宽度（border-width），格式如下：
+border-width:
+thin（窄或薄）
+|medium（中等
+thick（厚）|
+长度值(px,em);
+2.边框颜色（border-color），格式如下：
+border-color:颜色（三种方式）|transparent（透明）;
+3.边框样式（border-style），格式如下：
+border-style:值;值有：
+	none（定义无边框，默认值），
+	hidden（与none相同，除非在表格元素中解决边框冲突时），
+	dotted（定义点状边框，在大多数浏览器中呈现为实现），
+	dashed（定义虚线，在大多数浏览器中呈现为实线），
+	solid（定义实线），
+	double（定义双线），
+	groove（定义3D凹槽边框），
+	ridge（定义3D垄状边框），
+	inset（定义3D inset边框），
+	outset（定义3D outset边框），
+	inherit（规定应该从父元素继承边框样式）。
+二、
+1.边框的4个方向，格式为：
+border-left|right|top|bottom-width
+border-left|right|top|bottom-color
+border-left|right|top|bottom-style
+2.边框的缩写：
+①.四方向都一致，格式为：
+border:宽度 颜色 样式;——（值之间用空格隔开）
+②.不同方向，格式为：
+border-top:宽度 颜色 样式;（值之间用空格隔开）
+border-left:宽度 颜色 样式;
+border-right:宽度 颜色 样式;
+border-bottom:宽度 颜色 样式;
+
+
+一、padding（内边距）属性：设置元素的内容与边框之间的距离（内边距或填充）。分4个方向（上、右、下、左）格式为：
+padding-top:长度值（px）|百分比;
+padding-right:长度值|百分比;
+padding-bottom:长度值|百分比;
+padding-left:长度值|百分比;
+说明：
+1.值不能为负值
+2.盒子在网页中占的空间，不单单与width和height属性有关，还与padding属性有关。
+二、padding属性缩写，格式如下：
+padding:值1;——4个方向都为值1
+padding:值1 值2;——上下=值1，左右=值2
+padding:值1 值2 值3;——上=值1，左右=值2，下=值3
+padding:值1 值2 值3 值4;——上=值1，右=值2，下=值3，左=值4（值与值之间用空格隔开。padding属性有4个值时，按照顺时针来排列，即上、右、下、左）
+具体例：padding:10px 5px 8px 20px;
+
+一、margin属性（外边距属性）
+设置元素与元素之间的距离（外边距，也可理解为4个方向的边框延伸出去的距离）。
+1.4个方向（上、右、下、左），格式如下：
+margin-top:长度值（px）|百分比|auto;
+margin-right:长度值（px）|百分比|auto;
+margin-bottom:长度值（px）|百分比|auto;
+margin-left:长度值（px）|百分比|auto;
+说明：
+①.值可为负值
+2.margin属性的缩写,格式如下：
+margin:值1;——4个方向都为值1
+margin:值1 值2;——上下=值1，左右=值2
+margin:值1 值2 值3;——上=值1，左右=值2，下=值3
+margin:值1 值2 值3 值4;——上=值1，右=值2，下=值3，左=值4（从”上“开始顺时针，值之间用空格隔开）
+具体例：margin:10px 5px 6px 20px;
+3.默认情况下，相应的一些HTML块级元素（body、h1～h6、p等）存在外边距。在开发过程中，为了不受元素本身默认的外边距影响，在开发之前可以声明margin属性，覆盖默认样式。格式：
+body,h1,h2,h3,h4,h5,h6,p{margin:0;}
+4.margin值为auto时，实现水平方向居中（本元素相对于父元素而言）显示效果，且由浏览器计算外边距(格式为两种：1.margin:0 auto; 2.margin:auto;)
+5.垂直方向（水平方向也一样），两个相邻元素都设置外边距（一个元素的下外边距，一个元素的上外边距（这两者一般设置为一样）），外边距会发生合并（两个外边距合并形成一个外边距）。
+合并后两元素之间的距离=两个发生合并的外边距中的最大值
+
+
+IE盒子模型：（盒子是包含外边距，边框，内边距和内容的）
+width(宽度)=左边框+左内边距+内容宽度+右内边距+右边框
+height(高度)=上边框+上内边距+内容高度+下内边距+下边框
+注：IE盒子模型与标准盒子模型的区别：width（宽度）和height（高度）所描述的对象不同。
+
+display属性：
+1、inline：元素将显示为内联元素，元素前后没有换行符；
+2、block：元素将显示为块级元素，元素前后会有换行符；
+a、 将块级元素设置为内联元素：display：inline；
+b、 将内联元素设置为块级元素：display：block；
+内联元素之间有缝隙如何去除：
+1、可能是标签之间有换行，不添加换行或者空格；
+2、去外层添加一个父元素，设置父元素的font-size：0px；然后子 
+元素单独设置font-size:16px；
+行内元素不具有宽高属性，给其设置宽高不起作用，内边距起作用，外边距上下不起作用；
+3、inline-block：行内块元素，元素呈现为inline，具有block相应特性
+display：inline-block；（可以设置宽高、内边距、外边距属性）
+4、display：none
+实现子元素刚开始不显示，当鼠标经过父元素时显示 
+在子元素内设置：display：none；
+在父元素内设置： 父元素：hover 子元素{display：block}鼠标经过时块状显示子元素
+在父元素内设置： 父元素：hover 子元素{display：inline}鼠标经过时行内显示子元素
+
+1.1width、height、margin、padding、border这些样式属性不能被子元素继承，并且width和height只能适用于块级元素和替换元素。
+2.1对于这些样式属性，通过设置值为inherit，指定从父元素继承相对应的属性值。
+例：
+div{padding:10px}
+div p{padding:inherit;}

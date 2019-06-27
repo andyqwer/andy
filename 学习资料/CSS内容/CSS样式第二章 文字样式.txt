@@ -1,0 +1,121 @@
+-----CSS字体和文本样式-----
+--文字
+颜色、字体大小、字体、加粗
+--文本
+行高、对齐方式、文本装饰
+
+文字样式属性：
+字体：font-family、
+文字大小：font-size、
+文字颜色：color、
+文字粗细：font-weight、
+文字样式：font-style
+font-family属性（具体字体名、字体集）："字体1",“字体2”...
+注意：含空格字体名和中文,用英文引号(")括起，多个字体用英文","隔开，引号嵌套，外使用双引号，内使用单引号 。说人话（style="family:'宋体'"）
+设置多个字体的好处是，浏览器依次查找如果没有就会使用自带的默认样式
+字体集：Serif（会在字体尾部添加一下装饰线）、Sans-serif（没有装饰线）、Monospace、Cursive、Fantasy
+
+相对单位
+①px单位值受显示器分辨率影响（在手机端设置大小时，一般不使用px）
+②属性值larger，smaller都是相对父元素的文字大小变化
+③属性值单位em是相对于父元素的倍数（体位），2em相当于父元素的2倍
+④属性值单位%也是相对于父元素来进行大小设置，150%相当于父元素乘以150%
+⑤被父元素包裹的子元素继承父元素的计算值，不是继承父元素的属性值
+
+color文字颜色
+1.颜色名：具体颜色名称
+2.RGB（red，green，blue）：用数字（范围：0~255）或百分比（范围：0%~100%）
+3.十六进制：#开头，一共六位（范围：0~F，即0~9+A~F一共十六个数字）
+注：RGB和十六进制的颜色可在网络查询
+
+字体加粗
+1.1font-weight加粗。normal,bold,bloder,lighter
+粗细值位100~900一个阈值，因为加粗受字体限制，100~600几乎相同，700~900几乎相同，所以在开发过程中一般用normal、bold，其中normal相当于400粗细值，bold相当于700粗细值。
+html中斜体是em、i
+1.2font-style文字格式。normal、italic斜体、oblique倾斜。
+1.3font-variant字体变形(针对英文，设置为小型大写字母)。normal、small-caps小型大写字母。
+
+font属性系列简写，顺序，空格分开是重点
+font：font-style font-variant font-weight font-size/font-height font-family。这个顺序很重要
+注意：
+1、同时设置font-size和font-family，属性才会起作用且必须先size再是family 。
+2、style variant weight可以打乱顺序
+3、style variant weight必须写在size前面
+4、height是行高，必须和size写在一起用分号隔开/
+总结：font属性简写的话，每个属性值之间用空格隔开，书写顺序是：font-style font-variant font-weight font-size font-family，如果font-family的值有多个时，值用逗号分开。
+
+1text-align,设置元素内文本的水平对齐方式
+四种对齐方式left,right,center,justify（两端对齐）。
+该属性只对块级元素设置有效。
+不同浏览器会对元素有不同的展示效果。
+p{width:50%;margin:0 auto;}
+设置浏览器一致显示居中
+
+line-height属性-行高<br />
+text-indent行缩进 如text-indent：2em
+em 随着字体大小而变化<br />
+继承的是计算后的值，不是直接把em或%的值继承过来
+
+vertical-align属性
+1、垂直对齐方式的属性只对行内元素和单元格有效，对块级元素不生效；<br />
+2、单行文字垂直居中单行文本垂直居中则line-height:与高度值相同；
+3、多行文字垂直居中在父元素中display：table；子元素display：table-cell；
+baseline	默认。元素放置在父元素的基线上。
+sub	垂直对齐文本的下标。
+super	垂直对齐文本的上标
+top	把元素的顶端与行中最高元素的顶端对齐
+text-top	把元素的顶端与父元素字体的顶端对齐
+middle	把此元素放置在父元素的中部。
+bottom	把元素的顶端与行中最低的元素的顶端对齐。
+text-bottom	把元素的底端与父元素字体的底端对齐。
+length	使用正负值来表示方向和移动距离
+%	使用 "line-height" 属性的百分比值来排列此元素。允许使用负值。 
+inherit	规定应该从父元素继承 vertical-align 属性的值。
+
+word-spacing：设置元素内单词之间间距 px/em/Z
+letter-spacing：设置元素内字母之间间距 px/em
+text-transforms：设置元素内文本的大小写：
+1、capitalize（首字母大写）
+2、uppercase（字母大写）
+3、lowercase（字母小写）
+none
+text-decoration：设置元素内文本的装饰 （所有元素上，不能继承）underline（下划线）|overline（上划线）|line-through（删除线）|blink（文字闪烁效果，有浏览器的兼容性）|none
+设置多个样式值中间用空格隔开如：text-decoration:overline underline;如果最后一个属性值为none那么就什么效果都没有了。
+
+
+CSS文字样式：
+多个属性的简写：
+font{italic small-caps bold 20px "微软雅黑",serif}
+注意：
+1、要按照顺序写：font-style(字体风格) font-variant(小型大写字体或正常字体) font-weight(字体的粗细) font-size(字体的尺寸) font-size/line-heght(字体的大小行高) font-family(字体的系列)
+2、先写字体大小再写字体
+3、font-size/line-height作为一组使用，中间用/区分
+4、多个值之间用空格隔开
+5、多个字体之间用,隔开
+
+font-family:字体
+font-family:“微软雅黑"，“宋体”，“黑体”,sans-serif(字体集); 
+font-size:字体大小
+绝对单位（不推荐使用） 相对单位：px像素（受显示器分辨率影响） em/%（都是针对父元素设置的）
+color:字体颜色
+具体颜色名称 rgb(255, 255, 255) 十六进制#ffffff
+字体的其他样式：
+加粗：font-weight:normal|bold|bolder|lighter|100~900 nomal=400 bold=700
+斜体：font-style:normal|italic|oblique
+变形：font_variant:normal|small-caps(小型大写字母)
+文本水平对齐方式：text-align（只对块级元素有用）
+left、right、center、justify
+文本垂直对齐：vertical-align（只对行内元素有用，对块级元素没用）
+beasline（基线对齐）、sub（下标）、super（上标）、top、text-top、middle、bottom、text-bottom、长度、百分比
+多行文字垂直居中：添加表格属性
+多行文字垂直居中在父元素中display：table；子元素display：table-cell；
+设置行高：line-height
+当只有一行文字是只用设置行高和父控件的高度一样就可以垂直居中显示了
+(text-indent:设置缩进)
+其他属性：
+word-spacing：设置元素内单词之间的间距
+letter-spacing：设置元素内字母之间的间距
+text-transform：设置元素内文本的大小写
+capitalize（首字母大写）、uppercase（大写）、lowercase（小写）、none
+text-decoration：设置文本装饰
+underline（下划线）、overline（上划线）、line-throught（贯穿线）、blink（闪烁效果（存在兼容性））、none
