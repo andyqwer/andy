@@ -1,0 +1,126 @@
+.header {
+  border-bottom: 2px rgba(0, 0, 0, 0.1) solid;
+  height: 60px;
+  .header-box {
+    max-width: 1440px;
+    margin: 0 auto;
+    .logo {
+      width: 100px;
+      height: 60px;
+      background: url(../images/header/logo.png) no-repeat center;
+      background-size: 100%;
+      float: left;
+      margin-right: 150px;
+    }
+    .logo-lt {
+      width: 600px;
+      height: 60px;
+      float: left;
+      .item-top {
+        float: left;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 15px;
+        font-size: 16px;
+        &.top-home {
+          color: #ea6f5a;
+          .top-icon {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            margin-right: 5px;
+            background: url(../images/icon/home.png) no-repeat center;
+            background-size: 100%;
+          }
+        }
+        &.app-down {
+          .top-icon {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            margin-right: 5px;
+            background: url(../images/icon/app4.png) no-repeat center;
+            background-size: 100%;
+          }
+
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+        &.sw {
+          width: 200px;
+          position: relative;
+          input {
+            border: 0px;
+            border-radius: 20px;
+            width: 90%;
+            height: 40px;
+            padding: 0 20px;
+            background-color: #eee;
+            outline: none;
+          }
+          .btn-sw {
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            background: url(../images/icon/sw.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            top: 18px;
+            right: 10px;
+          }
+        }
+      }
+    }
+    .logo-rt {
+      float: right;
+      width: 400px;
+      height: 60px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .item {
+        display: block;
+        width: 50px;
+        color: #ea6f5a;
+        height: 38px;
+        line-height: 38px;
+        font-size: 14px;
+        padding: 0 8px;
+        margin: 0 8px;
+        text-align: center;
+      }
+      .icon-Aa {
+        background: url(../images/icon/Aa.png) no-repeat center;
+        background-size: 30%;
+        opacity: 0.6;
+      }
+      .icon-bete {
+        width: 25px;
+        height: 25px;
+        background: url(../images/icon/bata.png) no-repeat center;
+        background-size: 100%;
+      }
+      .registered {
+        border: 1px solid #ea6f5a;
+        border-radius: 25px;
+        &:hover {
+          color: #ec6149;
+          border-color: #ec6149;
+          background-color: rgba(236, 97, 73, 0.05);
+        }
+      }
+      .write-an-essay {
+        background-color: #ea6f5a;
+        border-radius: 25px;
+        color: #fff;
+        &:hover {
+          background-color: #ec6149;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.home-box {
+  width: 950px;
+  min-height: 500px;
+  padding-top: 30px;
+  margin: 0 auto;
+  display: flex;
+  .concat-box {
+    width: 625px;
+    margin-right: 40px;
+  }
+  .lists-rt {
+    width: 280px;
+  }
+}

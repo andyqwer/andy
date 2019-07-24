@@ -1,0 +1,87 @@
+.lists {
+  margin-top: 30px;
+  .ad {
+    width: 100%;
+    height: 158px;
+    background: url(../images/list/java.png) no-repeat center;
+    background-size: 100%;
+    position: relative;
+    border-radius: 5px;
+    .ad-text {
+      display: block;
+      width: 35px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      font-size: 10px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  .lists-item {
+    .lists-item-top {
+      padding: 20px 0;
+      font-size: 14px;
+      line-height: 14px;
+      color: #999;
+      .get-change {
+        float: right;
+        cursor: pointer;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+  .items-box-rt {
+    .item-author {
+      height: 60px;
+      border: none;
+      margin-top: 10px;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50px;
+        display: block;
+        float: left;
+        margin-top: 8px;
+      }
+      .author-info {
+        color: #999;
+        width: 220px;
+        margin-left: 10px;
+        margin-top: 15px;
+        float: left;
+        .author-name {
+          font-size: 16px;
+          color: #666;
+        }
+        .attention {
+          color: #42c02e;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .statistics {
+          color: #999;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .list-bot {
+    padding: 7px 0 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    color: #787878;
+    background-color: #f7f7f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+  }
+}
