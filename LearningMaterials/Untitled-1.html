@@ -1,40 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title></title>
+    <meta charset="UTF-8" />
+    <title>text-overflow</title>
     <style type="text/css">
-      div {
-        width: 200px;
-        height: 150px;
-        background-color: #eee;
-        margin-top: 5px;
+      p {
+        width: 500px;
+        font-size: 20px;
+        margin: 10px auto;
+        background: #abcdef;
+        overflow: hidden;
       }
-      section {
-        width: 200px;
-        height: 30px;
-        margin-bottom: 5px;
-        background-color: #ff0;
+      .p1 {
+        text-overflow: ellipsis;
       }
-      div:empty {
-        background-color: #f00;
+      .p1:hover {
+        overflow: inherit;
       }
-      section:empty {
-        background-color: #abcdef;
+      .p2 {
+        text-overflow: clip;
       }
+      .p2:hover {
+        overflow: inherit;
+      }
+
       /*此处写代码*/
     </style>
   </head>
   <body>
-    <div>
-      <section>one</section>
-      <section>two</section>
-    </div>
-    <div></div>
-    <div>
-      <section>three</section>
-      <section>four</section>
-      <section>five</section>
-      <section></section>
-    </div>
+    <p class="p1">bababadalgharaghtakamminarronnkonnbronntonne,rronntuonnthunn,trovarrhounawnskawntoohoohoordenenthurnuk</p>
+    <p class="p2">bababadalgharaghtakamminarronnkonnbronntonne,rronntuonnthunn,trovarrhounawnskawntoohoohoordenenthurnuk</p>
   </body>
 </html>
