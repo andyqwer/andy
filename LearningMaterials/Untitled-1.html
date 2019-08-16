@@ -1,133 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum=1.0, user-scalable=no" />
+    <title>Document</title>
+    <!-- <meta name=""> -->
     <style>
-      /* 在此处补充代码*/
-      * {
-        padding: 0px;
-        margin: 0px;
+      #box {
+        width: 80%;
+        margin: 0 auto;
+        background: #ccc;
+        text-align: center;
       }
-      header {
-        background-color: black;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+      #box > img {
+        display: inline-block;
+        padding: 1.5%;
+        width: 21%;
+        height: 200px;
       }
-      .nav {
-        width: 300px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 18px;
+      /*此处写代码*/
+      @media screen and(max-width:960px ) and (min-width: width 780px) {
+        #box > img {
+          padding: 1%;
+          width: 30%;
+        }
       }
-      li {
-        color: white;
-        list-style: none;
-      }
-      .login input {
-        background-color: orange;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        margin: 0 5px;
-        font-size: 18px;
-      }
-      section {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-      section .section {
-        width: 45%;
-        height: 100px;
-        background-color: #abcdef;
-        border-radius: 5px;
-        display: flex;
-        margin: 10px;
-        padding: 10px;
 
-        justify-content: space-around;
+      @media screen and(max-width:780px ) and (min-width: width 440px) {
+        #box > img {
+          padding: 1%;
+          width: 46%;
+        }
       }
-      section .section .box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      section .section .shopping {
-        display: flex;
-        align-items: center;
-      }
-      section .section .shopping .btn {
-        background-color: orange;
-        color: white;
-        border-radius: 5px;
-        font-weight: 700;
-        padding: 10px;
+
+      @media screen and(max-width:440px ) {
+        #box > img {
+          padding: 5%;
+          width: 90%;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- 头部 -->
-    <header>
-      <div class="logo">
-        <img src="http://climg.mukewang.com/59197ab000014f1503000100.jpg" alt="" />
-      </div>
-      <ul class="nav">
-        <li>课程</li>
-        <li>路径</li>
-        <li>猿问</li>
-        <li>手记</li>
-      </ul>
-      <div class="login">
-        <input type="button" value="登录" />
-        <input type="button" value="注册" />
-      </div>
-    </header>
-    <!-- 主体内容 -->
-    <section>
-      <div class="section">
-        <div class="box">
-          <p>《前端小白入门手册》</p>
-          <div>适用人群：没有任何前端基础的小白</div>
-          <div>费用：￥499</div>
-        </div>
-        <div class="shopping">
-          <div class="btn">加入购物车</div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="box">
-          <p>《HTML5月CSS3实现动态网页》</p>
-          <div>适用人群：有html和css基础的童鞋</div>
-          <div>费用：￥599</div>
-        </div>
-        <div class="shopping">
-          <div class="btn">加入购物车</div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="box">
-          <p>《前端小白入门手册》</p>
-          <div>适用人群：没有任何前端基础的小白</div>
-          <div>费用：￥499</div>
-        </div>
-        <div class="shopping">
-          <div class="btn">加入购物车</div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="box">
-          <p>《HTML5月CSS3实现动态网页》</p>
-          <div>适用人群：有html和css基础的童鞋</div>
-          <div>费用：￥599</div>
-        </div>
-        <div class="shopping">
-          <div class="btn">加入购物车</div>
-        </div>
-      </div>
-    </section>
+    <div id="box">
+      <img src="http://img.mukewang.com/climg/5a45e49100014e5010601059.jpg" alt="" />
+      <img src="http://img.mukewang.com/climg/5a45e53b00012e6d09940789.jpg" alt="" />
+      <img src="http://img.mukewang.com/climg/5a45e53c0001d04e09940732.jpg" alt="" />
+      <img src="http://img.mukewang.com/climg/5a45e49100014e5010601059.jpg" alt="" />
+      <img src="http://img.mukewang.com/climg/5a45e53b00012e6d09940789.jpg" alt="" />
+      <img src="http://img.mukewang.com/climg/5a45e53c0001d04e09940732.jpg" alt="" />
+    </div>
   </body>
 </html>
