@@ -34,16 +34,15 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'api': resolve('src/api'),
-      'assets': resolve('src/assets'),
-      'base': resolve('src/base'),
-      'components': resolve('src/components'),
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': resolve('src'),
+      'components':resolve('src/components'),
       'pages': resolve('src/pages')
     }
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
